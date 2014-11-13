@@ -1,0 +1,99 @@
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>regist PARKnSHOP</title>
+	<link rel="stylesheet" href="../css/regist.css">
+</head>
+<body >
+	<a href="login.jsp">login</a>
+	<div id="head">
+		<span>please register</span>
+	</div>
+	<form action="register.do" method="post">
+	<div id="body1">
+		<div id="perMessage">
+			<!-- personal message -->
+			<label id="lable_username">UserName</label>
+			<input type="text" id="user_name"  name="username" placeholder="username"><br />
+			<label id="label_password">Password</label>
+			<input type="password" id="user_password" name="password" placeholder="password"><br />
+			<div style="width:432px"><label id="label_sex">Sex</label>
+			<input type="radio" name="sex" style="width:20px;margin-top:0px;" checked value="male"/><font style="font-size:18px;font-weight:bold;">male</font>
+            <input type="radio" name="sex" style="width:20px" value="female" type="width:20px" /><font style="font-size:18px;font-weight:bold;">female</font><br/>
+			</div>
+			
+			<label id="label_birthday">Birthday</label>
+			<input type="text" id="birthday" name="birthday"placeholder="XXXX-XX-XX">
+		</div>
+	</div>
+	<div id="body2">
+		<div id="funMessage">
+			<!-- fundamental message -->
+			<label id="label_tel">TelNumber</label>
+			<input type="text" id="tel_number" name="telnumber" placeholder="tellphone number"><br />
+			<label id="label_address">Address</label>
+			<input type="text" id="address" name="address" placeholder="address"><br />
+			<label id="label_email">Email</label>
+			<input type="text" id="email" name="email" placeholder="email"><br />
+		</div>
+	</div>
+	<div id="body3">
+		<input type="submit" value="submit" id="submit" onclick="return submity()">
+	</div>
+	<script>
+	function $(id){
+		return document.getElementById(id);
+	}
+
+	function submity(){
+		//uname
+		var user=$("user_name");
+		if(user.value==""){
+			alert("user name can not be null!");
+			return false;
+		}
+		var pwd=$("user_password");
+		if(pwd.value==""){
+			alert("password can not be null!");
+			return false;
+		}
+            
+		var bir=$("birthday");
+		var bReg=/^(19|20)(\d){2}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[0-1])$/;
+		if(bir.value.search(bReg)==-1){
+			alert("birthday is illegal!");
+			return false;
+		}
+
+		var tnum=$("tel_number");
+		var tReg=/(\d){11}/gi;
+		if(tnum.value.search(tReg)==-1)
+		{
+			alert("telephone number is illegal!");
+			return false;
+		}
+
+		var addr=$("address");
+		if(addr.value=="")
+		{
+			alert("address can not be null!");
+			return false;
+		}
+
+		var email=$("email");
+		var eReg= /^([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+@([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+\.(?:com|cn)$/;
+		if(email.value.search(eReg)==-1)
+		{
+			alert("email address is illegal!");
+			return false;
+		}
+		return true;
+	}
+
+
+	</script>
+	</form>
+
+
+</body>
+</html>
