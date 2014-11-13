@@ -1,0 +1,16 @@
+1. how to run this project
+  (1) first of all, Mysql and Tomcat are requried.
+  (2) import all the sql tables into your MYSQL
+  (3) Copy PARKnSHOP file under Tomcat/webapps/
+  (4) know you can access our system direcly by any browser input like host:8080/PARKnSHOP/public/index.jsp
+  
+  Administer account :  wangxiaohui 930512
+  customer/seller account: wangxiaohui 930512 (hint you can use other by looking up at customer table or register a new one in out System)
+
+
+2. how to compile this program.
+
+  all the source code(java jsp servlet) are included in src files. 
+
+
+You are welcomed to contact me when encountering any problems : 786830875@qq.com
