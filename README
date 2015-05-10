@@ -2,7 +2,7 @@
   (1) first of all, Mysql and Tomcat are requried.
   (2) import all the sql tables into your MYSQL
   (3) Copy PARKnSHOP file under Tomcat/webapps/
-  (4) know you can access our system direcly by any browser input like host:8080/PARKnSHOP/public/index.jsp
+  (4) now you can access our system direcly by any browser inputing like localhost:8080/PARKnSHOP/public/index.jsp
   
   Administer account :  wangxiaohui 930512
   customer/seller account: wangxiaohui 930512 (hint you can use other by looking up at customer table or register a new one in out System)
